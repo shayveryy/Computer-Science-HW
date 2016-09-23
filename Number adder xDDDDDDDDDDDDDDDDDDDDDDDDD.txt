@@ -1,0 +1,21 @@
+number = input("enter a number")
+min = number
+max = number
+total = number
+numbersadded = 1
+mean = number
+	while continue != "no":
+		number = input("enter a number")
+		IF number > max:
+			number = max
+		ELIF number < min:
+			number = min
+		ENDIF
+		numbersadded = numbersadded+1
+		total = total + number
+		mean = total/numbersadded
+		print (mean, max, min)
+		continue = input("do you want to continue, enter yes or no")
+	ENDWHILE
+	
+	
