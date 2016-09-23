@@ -7,9 +7,9 @@ mean = number
 	while continue != "no":
 		number = input("enter a number")
 		IF number > max:
-			number = max
+			max = number
 		ELIF number < min:
-			number = min
+			min = number
 		ENDIF
 		numbersadded = numbersadded+1
 		total = total + number
