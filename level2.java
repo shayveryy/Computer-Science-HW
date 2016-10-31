@@ -16,7 +16,7 @@ public class level2
             }
         }
         
-        System.out.println(wordnumber);
+        System.out.println(wordnumber + "words");
         
         
        
@@ -28,8 +28,3 @@ public class level2
         }
 
     }
-
-
-
-
-        
