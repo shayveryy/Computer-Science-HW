@@ -1,0 +1,75 @@
+
+import java.io.FileReader;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class Task5
+{
+    public static void SearchForKeyword(String keyword) throws IOException
+    {
+        FileReader check = new FileReader("C:\\Users\\admin\\Downloads\\compscifilehandlingworl\\computing facts.txt") ;
+        BufferedReader br = new BufferedReader(check);
+        
+        String linw = br.readLine();
+        
+        do {
+            
+            if (linw.toLowerCase().contains(keyword.toLowerCase())){
+                System.out.println("FOUND" + keyword);
+                System.out.println(linw);
+            }
+       } while ((linw = br.readLine()) != null);
+        
+        br.close();
+    }
+ public static void main(String[] args) throws IOException
+    {
+    Scanner input = new Scanner(System.in);
+        System.out.println("1. Search for a term" + '\n' + "2. Search for a keyword in the descriptions" + '\n' + "3. End" + '\n' + "Key In Choice");
+        String choice = input.nextLine();
+        int flag = 2;
+     if (choice.equals("1")){
+            System.out.println("ok");
+            FileReader check = new FileReader("C:\\Users\\admin\\Downloads\\compscifilehandlingworl\\computing facts.txt") ;
+            BufferedReader br = new BufferedReader(check);
+        
+            String linw = br.readLine();
+            String term = input.nextLine();
+            
+            
+        
+      do {
+        
+          if (linw.equals(term)){
+                flag = 1;
+                System.out.println("found");
+                
+            }
+        else if (flag == 1){
+            System.out.println(term + '\n' + linw);
+            flag = 0;
+         }
+                
+        } while ((linw = br.readLine()) != null);
+        
+        
+        br.close();
+        if (flag == 2){
+            System.out.println("item not found");
+        }
+    }
+    
+        else if (choice.equals("2")){
+            System.out.println("2 hell yeahshs enter your keyword");
+            String keyword = input.nextLine();
+            SearchForKeyword(keyword);
+        }
+        else {
+            System.out.println(" 3 or other");
+        }
+        
+      
+        
+    }
+}
